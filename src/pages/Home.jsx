@@ -15,7 +15,7 @@ const StyledContainer = muiStyled("div")(({ theme }) => ({
   padding: theme.spacing(1),
 
   "&:hover": {
-    backgroundColor: theme.palette.secondary.main
+    backgroundColor: theme.palette.thirdColor.main
   }
 }));
 
