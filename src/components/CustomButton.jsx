@@ -1,29 +1,21 @@
 import React from "react";
-import { Button, ThemeProvider, createTheme } from "@mui/material";
-import { red, blue } from "@mui/material/colors";
+import { styled as muiStyled } from "@mui/material";
+import { Button, ThemeProvider } from "@mui/material";
+import theme from "../theme";
+
+const ButtonComponent = muiStyled(Button)({
+  "&:hover": {
+    backgroundColor: theme.palette.thirdColor.main,
+    color: "#000"
+  }
+});
 
 function CustomButton() {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: blue[500]
-      },
-      secondary: {
-        main: red[500]
-      }
-    },
-    typography: {
-      button: {
-        textTransform: "none"
-      }
-    }
-  });
-
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" size="medium" color="primary">
+      <ButtonComponent variant="contained" size="medium" color="primary">
         Botão :D
-      </Button>
+      </ButtonComponent>
     </ThemeProvider>
   );
 }
