@@ -6,7 +6,7 @@ import DrawerMenu from "../components/DrawerMenu";
 export default function Home() {
   return (
     <>
-      <DrawerMenu />
+      <TopBar />
     </>
   );
 }
