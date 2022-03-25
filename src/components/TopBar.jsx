@@ -85,15 +85,15 @@ export default function TopBar() {
 
           <SpacingDiv />
 
-          <CustomIcons size="large" sx={{ mr: 0 }}>
+          <CustomIcons size="large" sx={{ mr: 3, p: 3 }}>
             <Mic />
           </CustomIcons>
 
-          <CustomIcons size="large" sx={{ mr: 0 }}>
+          <CustomIcons size="large" sx={{ mr: 3, p: 3 }}>
             <Apps />
           </CustomIcons>
 
-          <CustomIcons size="large" sx={{ mr: 0 }}>
+          <CustomIcons size="large" sx={{ mr: 3, p: 3 }}>
             <MoreVert />
           </CustomIcons>
 
