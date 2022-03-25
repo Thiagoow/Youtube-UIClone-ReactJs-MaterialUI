@@ -1,23 +1,27 @@
 import React from "react";
 import theme from "../theme";
 import { styled } from "@mui/material";
+//Components:
 import { AppBar, Toolbar, IconButton, Button } from "@mui/material";
 import { Menu, AccountCircle, Mic, Apps, MoreVert } from "@mui/icons-material";
+//Images:
+import darkLogoImg from "../../assets/img/darkLogo.png";
 
 const CustomAppBar = styled(AppBar)({
   boxShadow: "none",
-
   "&:hover": {
     //backgroundColor: theme.palette.thirdColor.main
   }
 });
-
 const SpacingDiv = styled("div")({
   flexGrow: 1
 });
 
 const CustomIcons = styled(IconButton)({
   padding: theme.spacing(5)
+});
+const DarkLogo = styled("img")({
+  height: "1.8rem"
 });
 
 export default function Home() {
@@ -27,10 +31,12 @@ export default function Home() {
         <Toolbar>
           <IconButton
             size="large"
-            sx={{ pr: theme.spacing(4), pl: theme.spacing(4) }}
+            sx={{ ml: theme.spacing(1), mr: theme.spacing(4) }}
           >
             <Menu />
           </IconButton>
+
+          <DarkLogo src={darkLogoImg} />
 
           <SpacingDiv />
 
