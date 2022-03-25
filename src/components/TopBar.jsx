@@ -1,21 +1,24 @@
 import React from "react";
 import theme from "../theme";
-import { styled, useTheme } from "@mui/material";
-//------Components:
+import { styled } from "@mui/material";
+//Components:
 import {
-  AppBar as MuiAppBar,
+  AppBar,
   Toolbar,
   IconButton,
   Button,
   //Drawer:
-  Drawer as MuiDrawer,
+  Drawer,
+  Box,
   Divider,
   List,
-  ListItemButton,
+  ListItem as MuiListItem,
   ListItemIcon,
-  ListItemText
+  ListItemText as MuiListItemText,
+  Typography,
+  ListSubheader as MuiListSubheader
 } from "@mui/material";
-//------Icons:
+//Icons:
 import {
   Menu,
   AccountCircle,
@@ -23,14 +26,25 @@ import {
   Apps,
   MoreVert,
   //Drawer:
-  Inbox,
-  Mail,
-  ChevronRight,
-  ChevronLeft
+  Home,
+  Whatshot,
+  Explore,
+  Subscriptions,
+  VideoLibrary,
+  History,
+  LightbulbCircle,
+  AddCircle
 } from "@mui/icons-material";
-//------Images:
+//Images:
 import darkLogoImg from "../../assets/img/darkLogo.png";
 
+const CustomAppBar = styled(AppBar)({
+  boxShadow: "none",
+  zIndex: theme.zIndex.drawer + 1,
+  "&:hover": {
+    //backgroundColor: theme.palette.thirdColor.main
+  }
+});
 const SpacingDiv = styled("div")({
   flexGrow: 1
 });
@@ -41,97 +55,28 @@ const CustomIcons = styled(IconButton)({
 const DarkLogo = styled("img")({
   height: "1.8rem"
 });
+const ListItemText = styled(MuiListItemText)({
+  fontSize: "13px"
+});
+const ListItem = styled(MuiListItem)({
+  //Espaçamento entre os itens do DrawerMenu:
+  paddingTop: "0.4rem",
+  paddingBottom: "0.4rem"
+});
+const ListSubheader = styled(MuiListSubheader)({
+  textTransform: "uppercase"
+});
 
 const drawerWidth = 240;
-//Drawer StyledComponents:
-const openedMixin = (theme) => ({
-  width: drawerWidth,
-  transition: theme.transitions.create("width", {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.enteringScreen
-  }),
-  overflowX: "hidden"
-});
-const closedMixin = (theme) => ({
-  transition: theme.transitions.create("width", {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
-  }),
-  overflowX: "hidden",
-  width: `calc(${theme.spacing(7)} + 1px)`,
-  [theme.breakpoints.up("sm")]: {
-    width: `calc(${theme.spacing(8)} + 1px)`
-  }
-});
-const DrawerHeader = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "flex-end",
-  padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
-  ...theme.mixins.toolbar
-}));
-const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== "open"
-})(({ theme, open }) => ({
-  zIndex: theme.zIndex.drawer + 1,
-  transition: theme.transitions.create(["width", "margin"], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
-  }),
-  ...(open && {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(["width", "margin"], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  })
-}));
-const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== "open"
-})(({ theme, open }) => ({
-  width: drawerWidth,
-  flexShrink: 0,
-  whiteSpace: "nowrap",
-  boxSizing: "border-box",
-  ...(open && {
-    ...openedMixin(theme),
-    "& .MuiDrawer-paper": openedMixin(theme)
-  }),
-  ...(!open && {
-    ...closedMixin(theme),
-    "& .MuiDrawer-paper": closedMixin(theme)
-  })
-}));
 
-//
 export default function TopBar() {
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
-
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-
   return (
     <>
-      <AppBar color="inherit" open={open}>
+      <CustomAppBar color="inherit">
         <Toolbar>
           <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              marginRight: 4,
-              marginLeft: 1,
-              ...(open && { display: "none" })
-            }}
+            size="large"
+            sx={{ ml: theme.spacing(1), mr: theme.spacing(4) }}
           >
             <Menu />
           </IconButton>
@@ -160,66 +105,114 @@ export default function TopBar() {
             Fazer Login
           </Button>
         </Toolbar>
-      </AppBar>
+      </CustomAppBar>
 
-      <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === "rtl" ? <ChevronRight /> : <ChevronLeft />}
-          </IconButton>
-        </DrawerHeader>
-
-        <Divider />
-
-        <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-            <ListItemButton
-              key={text}
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center"
-                }}
-              >
-                {index % 2 === 0 ? <Inbox /> : <Mail />}
+      <Drawer
+        variant="permanent"
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          [`& .MuiDrawer-paper`]: {
+            width: drawerWidth,
+            borderRight: "none",
+            boxSizing: "border-box"
+          }
+        }}
+      >
+        <Toolbar />
+        <Box sx={{ overflow: "auto" }}>
+          <List>
+            <ListItem button>
+              <ListItemIcon>
+                <Home />
               </ListItemIcon>
-              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-            </ListItemButton>
-          ))}
-        </List>
+              <ListItemText primary="Início" />
+            </ListItem>
 
-        <Divider />
-
-        <List>
-          {["All mail", "Trash", "Spam"].map((text, index) => (
-            <ListItemButton
-              key={text}
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? "initial" : "center",
-                px: 2.5
-              }}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : "auto",
-                  justifyContent: "center"
-                }}
-              >
-                {index % 2 === 0 ? <Inbox /> : <Mail />}
+            <ListItem button>
+              <ListItemIcon>
+                <Whatshot />
               </ListItemIcon>
-              <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
-            </ListItemButton>
-          ))}
-        </List>
+              <ListItemText primary="Em alta" />
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Explore />
+              </ListItemIcon>
+              <ListItemText primary="Explorar" />
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <Subscriptions />
+              </ListItemIcon>
+              <ListItemText primary="Inscrições" />
+            </ListItem>
+          </List>
+
+          <Divider />
+
+          <List>
+            {["Biblioteca", "Histórico"].map((text, index) => (
+              <ListItem button key={text}>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <VideoLibrary /> : <History />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItem>
+            ))}
+          </List>
+
+          <Divider />
+
+          <Box p={7}>
+            <Typography variant="body2">
+              Faça login para curtir vídeos, comentar e se inscrever.
+            </Typography>
+
+            <Box mt={2}>
+              <Button
+                variant="outlined"
+                color="secondary"
+                startIcon={<AccountCircle />}
+              >
+                Fazer Login
+              </Button>
+            </Box>
+          </Box>
+
+          <Divider />
+
+          <List>
+            <ListSubheader>O melhor do Youtube</ListSubheader>
+
+            <ListItem button>
+              <ListItemIcon>
+                <LightbulbCircle />
+              </ListItemIcon>
+              <ListItemText primary="Categoria" />
+            </ListItem>
+
+            <ListItem button>
+              <ListItemIcon>
+                <LightbulbCircle />
+              </ListItemIcon>
+              <ListItemText primary="Categoria" />
+            </ListItem>
+          </List>
+
+          <Divider />
+
+          <ListItem button>
+            <ListItemIcon>
+              <AddCircle />
+            </ListItemIcon>
+            <ListItemText primary="Procurar mais" />
+          </ListItem>
+
+          <Divider />
+        </Box>
       </Drawer>
     </>
   );
