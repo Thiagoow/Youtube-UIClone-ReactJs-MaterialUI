@@ -15,9 +15,10 @@ const theme = createTheme({
   },
   typography: {
     button: {
-      textTransform: "none"
+      //textTransform: "none"
     }
-  }
+  },
+  spacing: 4
 });
 
 export default theme;
