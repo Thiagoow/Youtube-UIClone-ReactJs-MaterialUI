@@ -1,12 +1,13 @@
 import React from "react";
 import theme from "../theme";
 import { styled, useTheme } from "@mui/material";
-//Components:
+//------Components:
 import {
-  AppBar,
+  AppBar as MuiAppBar,
   Toolbar,
   IconButton,
-  Button, //Drawer:
+  Button,
+  //Drawer:
   Drawer as MuiDrawer,
   Divider,
   List,
@@ -14,19 +15,20 @@ import {
   ListItemIcon,
   ListItemText
 } from "@mui/material";
-//Icons:
+//------Icons:
 import {
   Menu,
   AccountCircle,
   Mic,
   Apps,
-  MoreVert, //Drawer:
+  MoreVert,
+  //Drawer:
   Inbox,
   Mail,
   ChevronRight,
   ChevronLeft
 } from "@mui/icons-material";
-//Images:
+//------Images:
 import darkLogoImg from "../../assets/img/darkLogo.png";
 
 const SpacingDiv = styled("div")({
@@ -40,8 +42,8 @@ const DarkLogo = styled("img")({
   height: "1.8rem"
 });
 
-//Drawer Styles:
 const drawerWidth = 240;
+//Drawer StyledComponents:
 const openedMixin = (theme) => ({
   width: drawerWidth,
   transition: theme.transitions.create("width", {
@@ -69,8 +71,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   // necessary for content to be below app bar
   ...theme.mixins.toolbar
 }));
-
-const CustomAppBar = styled(AppBar, {
+const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open"
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
@@ -87,7 +88,6 @@ const CustomAppBar = styled(AppBar, {
     })
   })
 }));
-
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open"
 })(({ theme, open }) => ({
@@ -105,6 +105,7 @@ const Drawer = styled(MuiDrawer, {
   })
 }));
 
+//
 export default function TopBar() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -119,7 +120,7 @@ export default function TopBar() {
 
   return (
     <>
-      <CustomAppBar color="inherit" open={open}>
+      <AppBar color="inherit" open={open}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -127,7 +128,8 @@ export default function TopBar() {
             onClick={handleDrawerOpen}
             edge="start"
             sx={{
-              marginRight: 5,
+              marginRight: 4,
+              marginLeft: 1,
               ...(open && { display: "none" })
             }}
           >
@@ -158,7 +160,7 @@ export default function TopBar() {
             Fazer Login
           </Button>
         </Toolbar>
-      </CustomAppBar>
+      </AppBar>
 
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
