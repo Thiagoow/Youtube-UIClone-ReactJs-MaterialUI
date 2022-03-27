@@ -2,75 +2,83 @@
   "videos": [
     {
       "id": 1,
-      "title": "FEED DO USUÁRIO | Criando uma Rede Social com React.js e .NET Core #29",
-      "channel": "Lucas Nhimi",
+      "title": "Sass Crash Course 2022",
+      "channel": "Pixel Rocket",
       "views": "11 mi de visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb1.png"
+      "avatar": "../../assets/img/avatars/1.jpg",
+      "thumb": "../../assets/img/thumbs/1.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=BEdCOvJ5RY4"
     },
     {
       "id": 2,
-      "title": "COMO MELHORAR SEU CODIGO JAVASCRIPT (ESLINT + PRETTIER + EDITORCONFIG) | Dicas e Truques #02",
-      "channel": "Lucas Nhimi",
+      "title": "Every programmer coding for the FIRST time",
+      "channel": "Mansoor Codes",
       "views": "957 mil visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb2.png"
+      "avatar": "../../assets/img/avatars/2.jpg",
+      "thumb": "../../assets/img/thumbs/2.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=j3sks_CJoZ0"
     },
     {
       "id": 3,
-      "title": "CONTEXT API NO EDITOR DE POST | Criando uma Rede Social com React.js e .NET Core #27",
-      "channel": "Lucas Nhimi",
+      "title": "Vite in 100 Seconds",
+      "channel": "Fireship",
       "views": "106 mil visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb3.png"
+      "avatar": "../../assets/img/avatars/3.jpg",
+      "thumb": "../../assets/img/thumbs/3.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=KCrXgy8qtjM"
     },
     {
       "id": 4,
-      "title": "CONTEXT API NO EDITOR DE POST | Criando uma Rede Social com React.js e .NET Core #27",
-      "channel": "Lucas Nhimi",
+      "title": "Windows 10, more like MacOS...",
+      "channel": "How to Creative",
       "views": "5,6 mi de visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb4.png"
+      "avatar": "../../assets/img/avatars/4.jpg",
+      "thumb": "../../assets/img/thumbs/4.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=uCVc-7z-toE"
     },
     {
       "id": 5,
-      "title": "EDITOR DE POST COM MARKDOWN 2 | Criando uma Rede Social com React.js e .NET Core #26",
-      "channel": "Lucas Nhimi",
+      "title": "Homepage da Tesla com ReactJS | UI Clone #14",
+      "channel": "Rocketseat",
       "views": "2,2 mi de visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb5.png"
+      "avatar": "../../assets/img/avatars/5.jpg",
+      "thumb": "../../assets/img/thumbs/5.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=Mf4Se4ZGcG8"
     },
     {
       "id": 6,
-      "title": "COMO MIGRAR PARA REACT HOOKS | Dicas e Truques #01",
-      "channel": "Lucas Nhimi",
+      "title": "Criando um projeto do zero para seu portfólio | Masterclass #14",
+      "channel": "Rocketseat",
       "views": "233 mil visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb6.png"
+      "avatar": "../../assets/img/avatars/5.jpg",
+      "thumb": "../../assets/img/thumbs/6.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=EhnXaybirdA"
     },
     {
       "id": 7,
-      "title": "PRÉ-REQUISITOS | Criando uma Rede Social com React.js e .NET Core #01",
-      "channel": "Lucas Nhimi",
+      "title": "UI Design a Dark Neumorphism Tesla app in Figma from scratch",
+      "channel": "Design Code",
       "views": "118 mil visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb7.png"
+      "avatar": "../../assets/img/avatars/7.jpg",
+      "thumb": "../../assets/img/thumbs/7.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=nthq56UABI0"
     },
     {
       "id": 8,
-      "title": "GIT E GITHUB | Criando uma Rede Social com React.js e .NET Core #04",
-      "channel": "Lucas Nhimi",
+      "title": "Responsive Landing Page Using HTML CSS & JavaScript 🎧 | Headphones Website Design",
+      "channel": "Bedimcode",
       "views": "1,9 mi de visualizações",
       "date": "há 1 semana",
-      "avatar": "../../assets/img/avatar.jpg",
-      "thumb": "../../assets/img/thumb8.png"
+      "avatar": "../../assets/img/avatars/8.jpg",
+      "thumb": "../../assets/img/thumbs/8.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=wXnlHIvKnTM"
     }
   ]
 }

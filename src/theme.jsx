@@ -16,9 +16,9 @@ const theme = createTheme({
       main: yellow[500]
     },
     background: {
-      default: darkMode ? "#232323" : "#fcfcfc",
-      dark: darkMode ? "#181818" : "#f4f6f8",
-      paper: darkMode ? "#232323" : "#fcfcfc"
+      default: darkMode ? "#262626" : "#fdfdfd",
+      dark: darkMode ? "#181818" : "#f7f7f7",
+      paper: darkMode ? "#262626" : "#fdfdfd"
     }
   },
   typography: {

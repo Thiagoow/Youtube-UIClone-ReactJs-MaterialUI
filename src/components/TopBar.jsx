@@ -87,6 +87,9 @@ export default function TopBar() {
           <a href="/">
             <Logo
               src={theme.palette.type === "dark" ? darkLogoImg : lightLogoImg}
+              style={{
+                marginTop: "0.5rem"
+              }}
             />
           </a>
 

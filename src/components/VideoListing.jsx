@@ -9,6 +9,10 @@ import videos from "../components/videos";
 const Box = styled(MuiBox)({
   backgroundColor: theme.palette.background.dark
 });
+const Link = styled("a")({
+  color: "inherit",
+  textDecoration: "inherit"
+});
 
 export default function VideoListing() {
   return (
@@ -29,23 +33,32 @@ export default function VideoListing() {
         <Grid container spacing={4.5}>
           {videos.map((item, index) => (
             <Grid item lg={3} md={4} sm={6} xs={12}>
-              <img
-                style={{ width: "100%" }}
-                alt={item.title}
-                src={item.thumb}
-              />
+              <Link href={item.videoUrl}>
+                <img
+                  style={{ width: "100%", maxHeight: "161px" }}
+                  alt={item.title}
+                  src={item.thumb}
+                />
+              </Link>
 
               <Box display="flex" alignItems="center" marginTop="0.2rem">
-                <img
+                <Link
+                  href={item.channelUrl}
                   style={{
-                    width: "38px",
-                    height: "38px",
-                    alignSelf: "start",
-                    borderRadius: "50%"
+                    alignSelf: "start"
                   }}
-                  alt={item.channel}
-                  src={item.avatar}
-                />
+                >
+                  <img
+                    style={{
+                      width: "38px",
+                      height: "38px",
+                      alignSelf: "start",
+                      borderRadius: "50%"
+                    }}
+                    alt={item.channel}
+                    src={item.avatar}
+                  />
+                </Link>
 
                 <Grid marginLeft="1rem" alignItems="center">
                   <Typography
@@ -60,7 +73,7 @@ export default function VideoListing() {
                       display: "-webkit-box"
                     }}
                   >
-                    {item.title}
+                    <Link href={item.videoUrl}>{item.title}</Link>
                   </Typography>
 
                   <Typography
@@ -69,7 +82,7 @@ export default function VideoListing() {
                     marginTop="0.5rem"
                     fontSize="0.75rem"
                   >
-                    {item.channel}
+                    <Link href={item.channelUrl}>{item.channel}</Link>
                   </Typography>
 
                   <Typography
