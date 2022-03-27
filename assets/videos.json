@@ -8,7 +8,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/1.jpg",
       "thumb": "../../assets/img/thumbs/1.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=BEdCOvJ5RY4"
+      "videoUrl": "https://www.youtube.com/watch?v=BEdCOvJ5RY4",
+      "channelUrl": "https://www.youtube.com/channel/UCn07jnZoflIMSdGWUkRqzsQ"
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/2.jpg",
       "thumb": "../../assets/img/thumbs/2.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=j3sks_CJoZ0"
+      "videoUrl": "https://www.youtube.com/watch?v=j3sks_CJoZ0",
+      "channelUrl": "https://www.youtube.com/channel/UCdtys5fMiaI_NJPeshNzxMQ"
     },
     {
       "id": 3,
@@ -28,7 +30,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/3.jpg",
       "thumb": "../../assets/img/thumbs/3.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=KCrXgy8qtjM"
+      "videoUrl": "https://www.youtube.com/watch?v=KCrXgy8qtjM",
+      "channelUrl": "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
     },
     {
       "id": 4,
@@ -38,7 +41,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/4.jpg",
       "thumb": "../../assets/img/thumbs/4.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=uCVc-7z-toE"
+      "videoUrl": "https://www.youtube.com/watch?v=uCVc-7z-toE",
+      "channelUrl": "https://www.youtube.com/channel/UCAEuu2tM4MkU5Jl1MQSlOSg"
     },
     {
       "id": 5,
@@ -48,7 +52,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/5.jpg",
       "thumb": "../../assets/img/thumbs/5.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=Mf4Se4ZGcG8"
+      "videoUrl": "https://www.youtube.com/watch?v=Mf4Se4ZGcG8",
+      "channelUrl": "https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg"
     },
     {
       "id": 6,
@@ -58,7 +63,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/5.jpg",
       "thumb": "../../assets/img/thumbs/6.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=EhnXaybirdA"
+      "videoUrl": "https://www.youtube.com/watch?v=EhnXaybirdA",
+      "channelUrl": "https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg"
     },
     {
       "id": 7,
@@ -68,7 +74,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/7.jpg",
       "thumb": "../../assets/img/thumbs/7.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=nthq56UABI0"
+      "videoUrl": "https://www.youtube.com/watch?v=nthq56UABI0",
+      "channelUrl": "https://www.youtube.com/channel/UCTIhfOopxukTIRkbXJ3kN-g"
     },
     {
       "id": 8,
@@ -78,7 +85,8 @@
       "date": "há 1 semana",
       "avatar": "../../assets/img/avatars/8.jpg",
       "thumb": "../../assets/img/thumbs/8.jpg",
-      "videoUrl": "https://www.youtube.com/watch?v=wXnlHIvKnTM"
+      "videoUrl": "https://www.youtube.com/watch?v=wXnlHIvKnTM",
+      "channelUrl": "https://www.youtube.com/c/Bedimcode"
     }
   ]
 }
