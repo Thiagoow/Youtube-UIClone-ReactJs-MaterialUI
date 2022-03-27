@@ -16,8 +16,10 @@ import {
   ListItemIcon,
   ListItemText as MuiListItemText,
   Typography,
-  ListSubheader as MuiListSubheader
+  ListSubheader as MuiListSubheader,
+  Hidden
 } from "@mui/material";
+import VideoListing from "../components/VideoListing";
 //Icons:
 import {
   Menu,
@@ -37,6 +39,7 @@ import {
 } from "@mui/icons-material";
 //Images:
 import darkLogoImg from "../../assets/img/darkLogo.png";
+import lightLogoImg from "../../assets/img/lightLogo.png";
 
 const CustomAppBar = styled(AppBar)({
   boxShadow: "none",
@@ -52,11 +55,11 @@ const SpacingDiv = styled("div")({
 const CustomIcons = styled(IconButton)({
   padding: theme.spacing(5)
 });
-const DarkLogo = styled("img")({
+const Logo = styled("img")({
   height: "1.8rem"
 });
 const ListItemText = styled(MuiListItemText)({
-  fontSize: "13px"
+  fontSize: "10px"
 });
 const ListItem = styled(MuiListItem)({
   //Espaçamento entre os itens do DrawerMenu:
@@ -81,7 +84,11 @@ export default function TopBar() {
             <Menu />
           </IconButton>
 
-          <DarkLogo src={darkLogoImg} />
+          <a href="/">
+            <Logo
+              src={theme.palette.type === "dark" ? darkLogoImg : lightLogoImg}
+            />
+          </a>
 
           <SpacingDiv />
 
@@ -107,113 +114,118 @@ export default function TopBar() {
         </Toolbar>
       </CustomAppBar>
 
-      <Drawer
-        variant="permanent"
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          [`& .MuiDrawer-paper`]: {
-            width: drawerWidth,
-            borderRight: "none",
-            boxSizing: "border-box"
-          }
-        }}
-      >
-        <Toolbar />
-        <Box sx={{ overflow: "auto" }}>
-          <List>
-            <ListItem button>
-              <ListItemIcon>
-                <Home />
-              </ListItemIcon>
-              <ListItemText primary="Início" />
-            </ListItem>
+      <Box display="flex">
+        <Hidden mdDown>
+          <Drawer
+            variant="permanent"
+            sx={{
+              width: drawerWidth,
+              flexShrink: 0,
+              [`& .MuiDrawer-paper`]: {
+                width: drawerWidth,
+                borderRight: "none",
+                boxSizing: "border-box"
+              }
+            }}
+          >
+            <Toolbar />
+            <Box p={3} sx={{ overflow: "auto" }}>
+              <List>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Home />
+                  </ListItemIcon>
+                  <ListItemText primary="Início" />
+                </ListItem>
 
-            <ListItem button>
-              <ListItemIcon>
-                <Whatshot />
-              </ListItemIcon>
-              <ListItemText primary="Em alta" />
-            </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Whatshot />
+                  </ListItemIcon>
+                  <ListItemText primary="Em alta" />
+                </ListItem>
 
-            <ListItem button>
-              <ListItemIcon>
-                <Explore />
-              </ListItemIcon>
-              <ListItemText primary="Explorar" />
-            </ListItem>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Explore />
+                  </ListItemIcon>
+                  <ListItemText primary="Explorar" />
+                </ListItem>
 
-            <ListItem button>
-              <ListItemIcon>
-                <Subscriptions />
-              </ListItemIcon>
-              <ListItemText primary="Inscrições" />
-            </ListItem>
-          </List>
+                <ListItem button>
+                  <ListItemIcon>
+                    <Subscriptions />
+                  </ListItemIcon>
+                  <ListItemText primary="Inscrições" />
+                </ListItem>
+              </List>
 
-          <Divider />
+              <Divider />
 
-          <List>
-            {["Biblioteca", "Histórico"].map((text, index) => (
-              <ListItem button key={text}>
+              <List>
+                {["Biblioteca", "Histórico"].map((text, index) => (
+                  <ListItem button key={text}>
+                    <ListItemIcon>
+                      {index % 2 === 0 ? <VideoLibrary /> : <History />}
+                    </ListItemIcon>
+                    <ListItemText primary={text} />
+                  </ListItem>
+                ))}
+              </List>
+
+              <Divider />
+
+              <Box p={4}>
+                <Typography variant="body2">
+                  Faça login para curtir vídeos, comentar e se inscrever.
+                </Typography>
+
+                <Box mt={2}>
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    startIcon={<AccountCircle />}
+                  >
+                    Fazer Login
+                  </Button>
+                </Box>
+              </Box>
+
+              <Divider />
+
+              <List>
+                <ListSubheader>O melhor do Youtube</ListSubheader>
+
+                <ListItem button>
+                  <ListItemIcon>
+                    <LightbulbCircle />
+                  </ListItemIcon>
+                  <ListItemText primary="Categoria" />
+                </ListItem>
+
+                <ListItem button>
+                  <ListItemIcon>
+                    <LightbulbCircle />
+                  </ListItemIcon>
+                  <ListItemText primary="Categoria" />
+                </ListItem>
+              </List>
+
+              <Divider />
+
+              <ListItem button>
                 <ListItemIcon>
-                  {index % 2 === 0 ? <VideoLibrary /> : <History />}
+                  <AddCircle />
                 </ListItemIcon>
-                <ListItemText primary={text} />
+                <ListItemText primary="Procurar mais" />
               </ListItem>
-            ))}
-          </List>
 
-          <Divider />
-
-          <Box p={7}>
-            <Typography variant="body2">
-              Faça login para curtir vídeos, comentar e se inscrever.
-            </Typography>
-
-            <Box mt={2}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                startIcon={<AccountCircle />}
-              >
-                Fazer Login
-              </Button>
+              <Divider />
             </Box>
-          </Box>
-
-          <Divider />
-
-          <List>
-            <ListSubheader>O melhor do Youtube</ListSubheader>
-
-            <ListItem button>
-              <ListItemIcon>
-                <LightbulbCircle />
-              </ListItemIcon>
-              <ListItemText primary="Categoria" />
-            </ListItem>
-
-            <ListItem button>
-              <ListItemIcon>
-                <LightbulbCircle />
-              </ListItemIcon>
-              <ListItemText primary="Categoria" />
-            </ListItem>
-          </List>
-
-          <Divider />
-
-          <ListItem button>
-            <ListItemIcon>
-              <AddCircle />
-            </ListItemIcon>
-            <ListItemText primary="Procurar mais" />
-          </ListItem>
-
-          <Divider />
-        </Box>
-      </Drawer>
+          </Drawer>
+        </Hidden>
+        <VideoListing />
+      </Box>
     </>
   );
 }
