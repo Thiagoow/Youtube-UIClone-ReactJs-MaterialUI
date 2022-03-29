@@ -36,7 +36,7 @@ export default function VideoListing() {
               <Link href={item.videoUrl}>
                 <img
                   style={{ width: "100%", maxHeight: "161px" }}
-                  alt={item.title}
+                  alt="Thumbnail image"
                   src={item.thumb}
                 />
               </Link>
