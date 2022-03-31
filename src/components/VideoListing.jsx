@@ -9,10 +9,10 @@ import {
   Toolbar,
   Grid
 } from "@mui/material";
-//Import videos array:
-import videos from "../components/videos";
 //Icons:
 import { MoreVert } from "@mui/icons-material";
+//Import videos array:
+import videos from "./videos";
 
 const Box = styled(MuiBox)({
   backgroundColor: theme.palette.background.dark
