@@ -5,8 +5,8 @@ const videos = [
     channel: "Pixel Rocket",
     views: "11 mi de visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/1.jpg",
-    thumb: "/assets/img/thumbs/1.jpg",
+    avatar: "/images/avatars/1.jpg",
+    thumb: "/images/thumbs/1.jpg",
     videoUrl: "https://www.youtube.com/watch?v=BEdCOvJ5RY4",
     channelUrl: "https://www.youtube.com/channel/UCn07jnZoflIMSdGWUkRqzsQ"
   },
@@ -16,8 +16,8 @@ const videos = [
     channel: "Mansoor Codes",
     views: "957 mil visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/2.jpg",
-    thumb: "/assets/img/thumbs/2.jpg",
+    avatar: "/images/avatars/2.jpg",
+    thumb: "/images/thumbs/2.jpg",
     videoUrl: "https://www.youtube.com/watch?v=j3sks_CJoZ0",
     channelUrl: "https://www.youtube.com/channel/UCdtys5fMiaI_NJPeshNzxMQ"
   },
@@ -27,8 +27,8 @@ const videos = [
     channel: "Fireship",
     views: "106 mil visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/3.jpg",
-    thumb: "/assets/img/thumbs/3.jpg",
+    avatar: "/images/avatars/3.jpg",
+    thumb: "/images/thumbs/3.jpg",
     videoUrl: "https://www.youtube.com/watch?v=KCrXgy8qtjM",
     channelUrl: "https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA"
   },
@@ -38,8 +38,8 @@ const videos = [
     channel: "How to Creative",
     views: "5,6 mi de visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/4.jpg",
-    thumb: "/assets/img/thumbs/4.jpg",
+    avatar: "/images/avatars/4.jpg",
+    thumb: "/images/thumbs/4.jpg",
     videoUrl: "https://www.youtube.com/watch?v=uCVc-7z-toE",
     channelUrl: "https://www.youtube.com/channel/UCAEuu2tM4MkU5Jl1MQSlOSg"
   },
@@ -49,8 +49,8 @@ const videos = [
     channel: "Rocketseat",
     views: "2,2 mi de visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/5.jpg",
-    thumb: "/assets/img/thumbs/5.jpg",
+    avatar: "/images/avatars/5.jpg",
+    thumb: "/images/thumbs/5.jpg",
     videoUrl: "https://www.youtube.com/watch?v=Mf4Se4ZGcG8",
     channelUrl: "https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg"
   },
@@ -60,8 +60,8 @@ const videos = [
     channel: "Rocketseat",
     views: "233 mil visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/5.jpg",
-    thumb: "/assets/img/thumbs/6.jpg",
+    avatar: "/images/avatars/5.jpg",
+    thumb: "/images/thumbs/6.jpg",
     videoUrl: "https://www.youtube.com/watch?v=EhnXaybirdA",
     channelUrl: "https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg"
   },
@@ -71,8 +71,8 @@ const videos = [
     channel: "Design Code",
     views: "118 mil visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/7.jpg",
-    thumb: "/assets/img/thumbs/7.jpg",
+    avatar: "/images/avatars/7.jpg",
+    thumb: "/images/thumbs/7.jpg",
     videoUrl: "https://www.youtube.com/watch?v=nthq56UABI0",
     channelUrl: "https://www.youtube.com/channel/UCTIhfOopxukTIRkbXJ3kN-g"
   },
@@ -83,8 +83,8 @@ const videos = [
     channel: "Bedimcode",
     views: "1,9 mi de visualizações",
     date: "há 1 semana",
-    avatar: "/assets/img/avatars/8.jpg",
-    thumb: "/assets/img/thumbs/8.jpg",
+    avatar: "/images/avatars/8.jpg",
+    thumb: "/images/thumbs/8.jpg",
     videoUrl: "https://www.youtube.com/watch?v=wXnlHIvKnTM",
     channelUrl: "https://www.youtube.com/c/Bedimcode"
   }
