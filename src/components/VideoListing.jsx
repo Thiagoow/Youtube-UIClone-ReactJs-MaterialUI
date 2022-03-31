@@ -55,7 +55,7 @@ export default function VideoListing() {
                       alignSelf: "start",
                       borderRadius: "50%"
                     }}
-                    alt={item.channel}
+                    alt={item.channel + "Profile pic"}
                     src={item.avatar}
                   />
                 </Link>
