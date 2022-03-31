@@ -2,9 +2,17 @@ import React from "react";
 import theme from "../theme";
 import { styled } from "@mui/material";
 //Components:
-import { Box as MuiBox, Typography, Toolbar, Grid } from "@mui/material";
+import {
+  Box as MuiBox,
+  Typography,
+  IconButton,
+  Toolbar,
+  Grid
+} from "@mui/material";
 //Import videos array:
 import videos from "../components/videos";
+//Icons:
+import { MoreVert } from "@mui/icons-material";
 
 const Box = styled(MuiBox)({
   backgroundColor: theme.palette.background.dark
@@ -94,6 +102,17 @@ export default function VideoListing() {
                     {`${item.views} • ${item.date}`}
                   </Typography>
                 </Grid>
+
+                <IconButton
+                  size="small"
+                  style={{
+                    display: "inline-flex",
+                    position: "relative",
+                    alignSelf: "start"
+                  }}
+                >
+                  <MoreVert />
+                </IconButton>
               </Box>
             </Grid>
           ))}
