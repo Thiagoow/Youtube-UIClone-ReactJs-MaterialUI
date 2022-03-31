@@ -20,6 +20,7 @@ import {
   Hidden
 } from "@mui/material";
 import VideoListing from "../components/VideoListing";
+import SearchField from "../components/SearchField";
 //Icons:
 import {
   Menu,
@@ -93,11 +94,13 @@ export default function TopBar() {
             />
           </a>
 
-          <SpacingDiv />
+          <SearchField />
 
           <CustomIcons size="large" sx={{ mr: 3, p: 3 }}>
             <Mic />
           </CustomIcons>
+
+          <SpacingDiv />
 
           <CustomIcons size="large" sx={{ mr: 3, p: 3 }}>
             <Apps />
@@ -107,11 +110,12 @@ export default function TopBar() {
             <MoreVert />
           </CustomIcons>
 
-          <Hidden smDown>
+          <Hidden lgDown>
             <Button
               variant="outlined"
               color="secondary"
               startIcon={<AccountCircle />}
+              style={{}}
             >
               Fazer Login
             </Button>
@@ -120,7 +124,7 @@ export default function TopBar() {
       </CustomAppBar>
 
       <Box display="flex">
-        <Hidden mdDown>
+        <Hidden lgDown>
           <Drawer
             variant="permanent"
             sx={{
