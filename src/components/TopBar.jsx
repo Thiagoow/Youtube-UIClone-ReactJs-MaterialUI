@@ -1,35 +1,23 @@
 import React from "react";
 import theme from "../theme";
 import { styled } from "@mui/material";
+//Components:
+import { AppBar, Toolbar, IconButton, Button, Hidden } from "@mui/material";
+import SearchField from "../components/SearchField";
+import DrawerMenu from "../components/DrawerMenu";
 //Icons:
 import { Menu, AccountCircle, Mic, Apps, MoreVert } from "@mui/icons-material";
 //Images:
 import darkLogoImg from "../../assets/img/darkLogo.png";
 import lightLogoImg from "../../assets/img/lightLogo.png";
-//Components:
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Button,
-  Box,
-  Hidden
-} from "@mui/material";
-import VideoListing from "../components/VideoListing";
-import SearchField from "../components/SearchField";
-import DrawerMenu from "../components/DrawerMenu";
 
 const CustomAppBar = styled(AppBar)({
   boxShadow: "none",
-  zIndex: theme.zIndex.drawer + 1,
-  "&:hover": {
-    //backgroundColor: theme.palette.thirdColor.main
-  }
+  zIndex: theme.zIndex.drawer + 1
 });
 const SpacingDiv = styled("div")({
   flexGrow: 1
 });
-
 const CustomIcons = styled(IconButton)({
   padding: theme.spacing(5)
 });
@@ -87,13 +75,9 @@ export default function TopBar() {
         </Toolbar>
       </CustomAppBar>
 
-      <Box display="flex">
-        <Hidden lgDown>
-          <DrawerMenu />
-        </Hidden>
-
-        <VideoListing />
-      </Box>
+      <Hidden lgDown>
+        <DrawerMenu />
+      </Hidden>
     </>
   );
 }
