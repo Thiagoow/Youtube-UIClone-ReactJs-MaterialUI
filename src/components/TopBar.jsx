@@ -107,13 +107,15 @@ export default function TopBar() {
             <MoreVert />
           </CustomIcons>
 
-          <Button
-            variant="outlined"
-            color="secondary"
-            startIcon={<AccountCircle />}
-          >
-            Fazer Login
-          </Button>
+          <Hidden smDown>
+            <Button
+              variant="outlined"
+              color="secondary"
+              startIcon={<AccountCircle />}
+            >
+              Fazer Login
+            </Button>
+          </Hidden>
         </Toolbar>
       </CustomAppBar>
 
