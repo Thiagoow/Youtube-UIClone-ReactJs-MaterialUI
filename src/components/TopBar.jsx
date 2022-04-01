@@ -48,7 +48,11 @@ export default function TopBar() {
 
           <SearchField />
 
-          <CustomIcons size="large" sx={{ mr: 3, p: 3 }}>
+          <CustomIcons
+            size="large"
+            sx={{ mr: 3, p: 3 }}
+            style={{ backgroundColor: "transparent" }}
+          >
             <Mic />
           </CustomIcons>
 
