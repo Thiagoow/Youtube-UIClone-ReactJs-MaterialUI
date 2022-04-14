@@ -56,13 +56,13 @@ const videos = [
   },
   {
     id: 6,
-    title: "Criando um projeto do zero para seu portfólio | Masterclass #14",
+    title: "COMEÇANDO NO REACT.JS EM 2022",
     channel: "Rocketseat",
     views: "233 mil visualizações",
     date: "há 1 semana",
     avatar: "/images/avatars/5.jpg",
     thumb: "/images/thumbs/6.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=EhnXaybirdA",
+    videoUrl: "https://www.youtube.com/watch?v=pDbcC-xSat4&t=1960s",
     channelUrl: "https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg"
   },
   {
