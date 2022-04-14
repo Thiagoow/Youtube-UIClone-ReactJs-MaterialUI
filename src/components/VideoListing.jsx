@@ -44,7 +44,11 @@ export default function VideoListing() {
             <Grid item lg={3} md={4} sm={6} xs={12} key={index}>
               <Link href={item.videoUrl}>
                 <img
-                  style={{ width: "100%", maxHeight: "161px" }}
+                  style={{
+                    width: "100%",
+                    maxWidth: "20rem",
+                    maxHeight: "10rem"
+                  }}
                   alt="Thumbnail image"
                   src={item.thumb}
                 />
